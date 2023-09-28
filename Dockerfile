@@ -2,13 +2,13 @@
 FROM openjdk:17
 
 # Establecemos el directorio de trabajo en /app
-#WORKDIR /app
-VOLUME /tmp
+WORKDIR /app
+#VOLUME /tmp
 
 # Expone el puerto en el que se ejecuta tu aplicación Spring Boot
 EXPOSE 8080
 
-ADD ./target/AppLearningg-0.0.1-SNAPSHOT.jar app.jar
+COPY target/AppLearningg-0.0.1-SNAPSHOT.jar app.jar
 
 ENTRYPOINT ["java","-jar","/app.jar"]
 
