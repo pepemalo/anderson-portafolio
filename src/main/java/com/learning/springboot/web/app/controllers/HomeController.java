@@ -22,7 +22,7 @@ public class HomeController {
 	@GetMapping("/")
 	public String home() {
 		System.out.println("##############################");
-		System.out.println("####    	INICIO		  ####");
+		System.out.println("####    	INICIO    ####");
 		this.init();
 		System.out.println("##############################");
 		return "redirect:/ac/index";
